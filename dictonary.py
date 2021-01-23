@@ -1,16 +1,26 @@
-f_num = float(imput("Виберіть перше число"))
-oper = input("Виберіть дію")
-s_num = float(input("Виберіть друге число"))
-prodolzhit = 'y'
-while prodolzhit = 'y':
-    if oper == '+':
-        print(f_num + s_num)
-    elif oper == '-':
-        print(f_num - s_num)
-    elif oper == '*':
-        print(f_num * s_num)
-    elif oper == '/':
-        print(f_num / s_num)
-    else:
-        print("Error")
-    prodolzhit = input(Ввдіть 'y', щоб  продовжити, або любу кнопку, щоб звершити)
+enter = ""
+list_a = []
+print(list_a)
+while enter != "exit":
+    enter = str(input("pleas choose A or B: "))
+    alphabet = ("ABCDEFGHIJKLMNOPRSTUVWXYZabcdefghijklmnoprstuvwxyzАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯабвгґдеєжзиіїйклмнопрстуфхцчшщьюя")
+    if enter.upper() == "A" or enter.upper() == "А":
+        a = input().split(" ")
+        for i in a:
+            if (i not in list_a) and len(i) >=3:
+                list_a.append(i)
+        print(list_a)
+        list_a.sort()
+        for i in range(len(list_a)):
+            print(list_a[i])
+        print("------------------------")
+    elif enter.upper() == "B" or enter.upper() == "Б":
+        a = input().split()
+        print(a)
+        for i in range(len(alphabet)):
+            number=0
+            for h in a:
+                number = number + h.count(alphabet[i])
+            if number > 0:
+                print(alphabet[i] + "-" + str(number))
+        print("-----------------------------------------")
